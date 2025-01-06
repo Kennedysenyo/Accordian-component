@@ -27,7 +27,7 @@ const App = () => {
    
   }
   
-  const accordainComponent = data.map( obj =>  
+  const accordainComponent = data && data.length > 0 ?  data.map( obj =>  
     <AccordianComponent 
       key={obj.id} 
       id={obj.id}
@@ -35,20 +35,23 @@ const App = () => {
       answer={obj.answer} 
       toggleVisibility={toggleVisibility}
       isVisible={selected.includes(obj.id)}
-    />
-  )
+    /> 
+  ) : <h1>No Data Available</h1>
 
   const className = clsx({
     multiple: selectMultiple
   })
   return (
     <main>
-      <button 
+    { (data && data.length) ?
+     <button 
         onClick={toggleMultipleSelect}
         className={className}
       >
        Multiple Select
-      </button>
+      </button> : null
+      
+    }
 
      {accordainComponent}
     </main>
