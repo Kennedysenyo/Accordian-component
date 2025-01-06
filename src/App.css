@@ -62,13 +62,13 @@ button {
   font-size: 1.2rem;
   background-color: #EADBC8;
   color: #ef1f1f;
-  border: 2px solid #ef1f1f;
+  border: 2px solid #102C57;
  margin-bottom: 20px;
 }
 
 button.multiple {
   color: #119111;
-  border: 2px solid #119111;
+  border: 2px solid #102C57;
 }
 
 h1 {
